@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vasanth B — Frontend Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet" />
   <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     :root {
       --bg: #0a0a0f;
@@ -22,7 +31,9 @@
       --tag-text: #a78bfa;
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       background: var(--bg);
@@ -36,7 +47,9 @@
     /* ── NAV ── */
     nav {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       z-index: 100;
       display: flex;
       align-items: center;
@@ -46,6 +59,7 @@
       backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
     }
+
     .nav-logo {
       font-family: 'Syne', sans-serif;
       font-weight: 800;
@@ -54,8 +68,17 @@
       color: var(--text);
       text-decoration: none;
     }
-    .nav-logo span { color: var(--accent2); }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
+
+    .nav-logo span {
+      color: var(--accent2);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
     .nav-links a {
       text-decoration: none;
       font-size: 0.85rem;
@@ -65,7 +88,10 @@
       text-transform: uppercase;
       transition: color 0.2s;
     }
-    .nav-links a:hover { color: var(--text); }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
 
     /* ── HERO ── */
     #hero {
@@ -75,7 +101,9 @@
       padding: 0 5vw;
       position: relative;
       overflow: hidden;
+      padding-top: 120px;
     }
+
     .hero-bg {
       position: absolute;
       inset: 0;
@@ -84,15 +112,18 @@
         radial-gradient(ellipse 40% 40% at 20% 80%, #a78bfa12 0%, transparent 55%);
       pointer-events: none;
     }
+
     .hero-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 4rem;
+      gap: 2rem;
       align-items: center;
       max-width: 1100px;
       margin: 0 auto;
       width: 100%;
+
     }
+
     .hero-label {
       display: inline-block;
       font-size: 0.72rem;
@@ -105,6 +136,7 @@
       border-radius: 2rem;
       margin-bottom: 1.5rem;
     }
+
     h1 {
       font-family: 'Syne', sans-serif;
       font-size: clamp(2.8rem, 5vw, 4.5rem);
@@ -113,7 +145,11 @@
       letter-spacing: -0.03em;
       margin-bottom: 1.4rem;
     }
-    h1 .name-accent { color: var(--accent2); }
+
+    h1 .name-accent {
+      color: var(--accent2);
+    }
+
     .hero-desc {
       font-size: 1rem;
       color: var(--muted);
@@ -121,11 +157,13 @@
       margin-bottom: 2rem;
       line-height: 1.8;
     }
+
     .hero-cta {
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
     }
+
     .btn-primary {
       background: var(--accent);
       color: #fff;
@@ -137,7 +175,12 @@
       transition: opacity 0.2s, transform 0.2s;
       display: inline-block;
     }
-    .btn-primary:hover { opacity: 0.85; transform: translateY(-2px); }
+
+    .btn-primary:hover {
+      opacity: 0.85;
+      transform: translateY(-2px);
+    }
+
     .btn-outline {
       border: 1px solid var(--border-hover);
       color: var(--text);
@@ -149,7 +192,11 @@
       transition: border-color 0.2s, background 0.2s;
       display: inline-block;
     }
-    .btn-outline:hover { border-color: var(--accent2); background: #a78bfa0d; }
+
+    .btn-outline:hover {
+      border-color: var(--accent2);
+      background: #a78bfa0d;
+    }
 
     /* hero right — floating card */
     .hero-card {
@@ -159,13 +206,17 @@
       padding: 2rem;
       position: relative;
     }
+
     .hero-card::before {
       content: '';
       position: absolute;
-      top: -1px; left: 20%; right: 20%;
+      top: -1px;
+      left: 20%;
+      right: 20%;
       height: 1px;
       background: linear-gradient(90deg, transparent, var(--accent2)88, transparent);
     }
+
     .hero-avatar {
       width: 64px;
       height: 64px;
@@ -180,18 +231,26 @@
       color: #fff;
       margin-bottom: 1rem;
     }
+
     .hero-card h3 {
       font-family: 'Syne', sans-serif;
       font-size: 1.1rem;
       font-weight: 700;
       margin-bottom: 0.25rem;
     }
-    .hero-card p { font-size: 0.85rem; color: var(--muted); margin-bottom: 1.5rem; }
+
+    .hero-card p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
     .skills-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
     }
+
     .skill-tag {
       background: var(--tag-bg);
       color: var(--tag-text);
@@ -201,6 +260,7 @@
       border-radius: 2rem;
       border: 1px solid #a78bfa22;
     }
+
     .stat-row {
       display: flex;
       gap: 1.5rem;
@@ -208,18 +268,35 @@
       padding-top: 1.5rem;
       border-top: 1px solid var(--border);
     }
-    .stat { text-align: center; }
+
+    .stat {
+      text-align: center;
+    }
+
     .stat-num {
       font-family: 'Syne', sans-serif;
       font-size: 1.5rem;
       font-weight: 800;
       color: var(--accent2);
     }
-    .stat-label { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.05em; text-transform: uppercase; }
+
+    .stat-label {
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
 
     /* ── SECTIONS SHARED ── */
-    section { padding: 6rem 5vw; }
-    .section-inner { max-width: 1100px; margin: 0 auto; }
+    section {
+      padding: 6rem 5vw;
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
     .section-label {
       font-size: 0.72rem;
       font-weight: 500;
@@ -228,6 +305,7 @@
       color: var(--accent2);
       margin-bottom: 0.75rem;
     }
+
     h2 {
       font-family: 'Syne', sans-serif;
       font-size: clamp(1.8rem, 3vw, 2.6rem);
@@ -238,21 +316,34 @@
     }
 
     /* ── ABOUT ── */
-    #about { background: var(--surface); }
+    #about {
+      background: var(--surface);
+    }
+
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 4rem;
       align-items: start;
     }
+
     .about-text p {
       color: var(--muted);
       font-size: 1rem;
       line-height: 1.9;
       margin-bottom: 1rem;
     }
-    .about-text p strong { color: var(--text); font-weight: 500; }
-    .info-list { list-style: none; margin-top: 1.5rem; }
+
+    .about-text p strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .info-list {
+      list-style: none;
+      margin-top: 1.5rem;
+    }
+
     .info-list li {
       display: flex;
       justify-content: space-between;
@@ -260,9 +351,21 @@
       border-bottom: 1px solid var(--border);
       font-size: 0.9rem;
     }
-    .info-list li span:first-child { color: var(--muted); }
-    .info-list li span:last-child { color: var(--text); font-weight: 400; }
-    .info-list a { color: var(--accent2); text-decoration: none; }
+
+    .info-list li span:first-child {
+      color: var(--muted);
+    }
+
+    .info-list li span:last-child {
+      color: var(--text);
+      font-weight: 400;
+    }
+
+    .info-list a {
+      color: var(--accent2);
+      text-decoration: none;
+    }
+
     .currently-learning {
       background: var(--card);
       border: 1px solid var(--border);
@@ -273,15 +376,22 @@
       font-size: 0.9rem;
       color: var(--muted);
     }
-    .currently-learning strong { color: var(--accent2); }
+
+    .currently-learning strong {
+      color: var(--accent2);
+    }
 
     /* ── SKILLS ── */
-    #skills { background: var(--bg); }
+    #skills {
+      background: var(--bg);
+    }
+
     .skills-cats {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1.25rem;
     }
+
     .skill-cat {
       background: var(--card);
       border: 1px solid var(--border);
@@ -289,11 +399,17 @@
       padding: 1.5rem;
       transition: border-color 0.25s, transform 0.25s;
     }
-    .skill-cat:hover { border-color: var(--accent2); transform: translateY(-4px); }
+
+    .skill-cat:hover {
+      border-color: var(--accent2);
+      transform: translateY(-4px);
+    }
+
     .skill-cat-icon {
       font-size: 1.5rem;
       margin-bottom: 0.75rem;
     }
+
     .skill-cat h4 {
       font-family: 'Syne', sans-serif;
       font-size: 0.9rem;
@@ -301,7 +417,13 @@
       margin-bottom: 0.75rem;
       color: var(--text);
     }
-    .skill-cat .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+    .skill-cat .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
     .skill-cat .tags span {
       background: var(--tag-bg);
       color: var(--muted);
@@ -312,12 +434,16 @@
     }
 
     /* ── PROJECTS ── */
-    #projects { background: var(--surface); }
+    #projects {
+      background: var(--surface);
+    }
+
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 1.5rem;
     }
+
     .project-card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -329,17 +455,28 @@
       position: relative;
       overflow: hidden;
     }
+
     .project-card::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       height: 3px;
       background: linear-gradient(90deg, var(--accent), var(--accent2));
       opacity: 0;
       transition: opacity 0.25s;
     }
-    .project-card:hover { border-color: var(--border-hover); transform: translateY(-5px); }
-    .project-card:hover::before { opacity: 1; }
+
+    .project-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-5px);
+    }
+
+    .project-card:hover::before {
+      opacity: 1;
+    }
+
     .project-type {
       font-size: 0.7rem;
       font-weight: 500;
@@ -348,6 +485,7 @@
       color: var(--accent2);
       margin-bottom: 0.5rem;
     }
+
     .project-card h3 {
       font-family: 'Syne', sans-serif;
       font-size: 1.1rem;
@@ -355,12 +493,14 @@
       margin-bottom: 0.5rem;
       letter-spacing: -0.01em;
     }
+
     .project-card .stack {
       display: flex;
       flex-wrap: wrap;
       gap: 0.4rem;
       margin-bottom: 1rem;
     }
+
     .project-card .stack span {
       background: var(--tag-bg);
       color: var(--tag-text);
@@ -368,6 +508,7 @@
       padding: 0.2rem 0.6rem;
       border-radius: 2rem;
     }
+
     .project-card p {
       font-size: 0.88rem;
       color: var(--muted);
@@ -375,7 +516,12 @@
       margin-bottom: 0.75rem;
       flex: 1;
     }
-    .project-highlights { list-style: none; margin-bottom: 1.25rem; }
+
+    .project-highlights {
+      list-style: none;
+      margin-bottom: 1.25rem;
+    }
+
     .project-highlights li {
       font-size: 0.82rem;
       color: var(--muted);
@@ -383,6 +529,7 @@
       padding-left: 1rem;
       position: relative;
     }
+
     .project-highlights li::before {
       content: '→';
       position: absolute;
@@ -390,6 +537,7 @@
       color: var(--accent2);
       font-size: 0.75rem;
     }
+
     .project-link {
       display: inline-flex;
       align-items: center;
@@ -401,11 +549,21 @@
       margin-top: auto;
       transition: gap 0.2s;
     }
-    .project-link:hover { gap: 0.7rem; }
+
+    .project-link:hover {
+      gap: 0.7rem;
+    }
 
     /* ── TRAINING ── */
-    #training { background: var(--bg); }
-    .timeline { position: relative; padding-left: 2rem; }
+    #training {
+      background: var(--bg);
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
+
     .timeline::before {
       content: '';
       position: absolute;
@@ -415,10 +573,12 @@
       width: 1px;
       background: var(--border);
     }
+
     .timeline-item {
       position: relative;
       margin-bottom: 2.5rem;
     }
+
     .timeline-dot {
       position: absolute;
       left: -1.65rem;
@@ -430,6 +590,7 @@
       border: 2px solid var(--bg);
       box-shadow: 0 0 0 3px var(--accent)44;
     }
+
     .timeline-date {
       font-size: 0.75rem;
       color: var(--accent2);
@@ -438,18 +599,24 @@
       margin-bottom: 0.35rem;
       text-transform: uppercase;
     }
+
     .timeline-item h3 {
       font-family: 'Syne', sans-serif;
       font-size: 1rem;
       font-weight: 700;
       margin-bottom: 0.2rem;
     }
+
     .timeline-item .org {
       font-size: 0.82rem;
       color: var(--muted);
       margin-bottom: 0.75rem;
     }
-    .timeline-item ul { list-style: none; }
+
+    .timeline-item ul {
+      list-style: none;
+    }
+
     .timeline-item ul li {
       font-size: 0.85rem;
       color: var(--muted);
@@ -458,6 +625,7 @@
       position: relative;
       line-height: 1.7;
     }
+
     .timeline-item ul li::before {
       content: '·';
       position: absolute;
@@ -467,18 +635,23 @@
     }
 
     /* ── EDUCATION ── */
-    #education { background: var(--surface); }
+    #education {
+      background: var(--surface);
+    }
+
     .edu-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1.25rem;
     }
+
     .edu-card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 1rem;
       padding: 1.5rem;
     }
+
     .edu-card .degree {
       font-size: 0.7rem;
       font-weight: 500;
@@ -487,6 +660,7 @@
       color: var(--accent2);
       margin-bottom: 0.5rem;
     }
+
     .edu-card h4 {
       font-family: 'Syne', sans-serif;
       font-size: 0.95rem;
@@ -494,7 +668,13 @@
       margin-bottom: 0.35rem;
       line-height: 1.4;
     }
-    .edu-card .school { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.75rem; }
+
+    .edu-card .school {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
     .edu-card .score {
       display: inline-block;
       background: var(--tag-bg);
@@ -506,12 +686,16 @@
     }
 
     /* ── CERTIFICATIONS ── */
-    #certifications { background: var(--bg); }
+    #certifications {
+      background: var(--bg);
+    }
+
     .cert-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.25rem;
     }
+
     .cert-card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -522,7 +706,11 @@
       align-items: flex-start;
       transition: border-color 0.2s;
     }
-    .cert-card:hover { border-color: var(--accent2); }
+
+    .cert-card:hover {
+      border-color: var(--accent2);
+    }
+
     .cert-icon {
       width: 44px;
       height: 44px;
@@ -535,25 +723,46 @@
       font-size: 1.2rem;
       flex-shrink: 0;
     }
+
     .cert-info h4 {
       font-family: 'Syne', sans-serif;
       font-size: 0.9rem;
       font-weight: 700;
       margin-bottom: 0.25rem;
     }
-    .cert-info p { font-size: 0.8rem; color: var(--muted); }
+
+    .cert-info p {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
 
     /* ── CONTACT ── */
-    #contact { background: var(--surface); text-align: center; }
-    #contact .section-inner { max-width: 600px; }
-    #contact h2 { margin-bottom: 1rem; }
-    #contact p { color: var(--muted); font-size: 1rem; margin-bottom: 2rem; }
+    #contact {
+      background: var(--surface);
+      text-align: center;
+    }
+
+    #contact .section-inner {
+      max-width: 600px;
+    }
+
+    #contact h2 {
+      margin-bottom: 1rem;
+    }
+
+    #contact p {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
     .contact-links {
       display: flex;
       justify-content: center;
       gap: 1rem;
       flex-wrap: wrap;
     }
+
     .contact-pill {
       display: inline-flex;
       align-items: center;
@@ -567,8 +776,17 @@
       font-size: 0.85rem;
       transition: border-color 0.2s, background 0.2s;
     }
-    .contact-pill:hover { border-color: var(--accent2); background: #a78bfa0d; color: var(--accent2); }
-    .contact-pill svg { width: 16px; height: 16px; }
+
+    .contact-pill:hover {
+      border-color: var(--accent2);
+      background: #a78bfa0d;
+      color: var(--accent2);
+    }
+
+    .contact-pill svg {
+      width: 16px;
+      height: 16px;
+    }
 
     /* ── FOOTER ── */
     footer {
@@ -581,29 +799,102 @@
 
     /* ── ANIMATIONS ── */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(28px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .fade-up { animation: fadeUp 0.7s ease both; }
-    .delay-1 { animation-delay: 0.1s; }
-    .delay-2 { animation-delay: 0.22s; }
-    .delay-3 { animation-delay: 0.34s; }
-    .delay-4 { animation-delay: 0.46s; }
+      from {
+        opacity: 0;
+        transform: translateY(28px);
+      }
 
-    /* ── RESPONSIVE ── */
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-up {
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .delay-1 {
+      animation-delay: 0.1s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.22s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.34s;
+    }
+
+    .delay-4 {
+      animation-delay: 0.46s;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: white;
+    }
+
     @media (max-width: 768px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .about-grid { grid-template-columns: 1fr; }
-      .nav-links { display: none; }
+
+      .hamburger {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #111118;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 2rem 0;
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      #hero {
+        padding-top: 140px;
+        min-height: auto;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-card {
+        margin-top: 2rem;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- NAV -->
   <nav>
     <a class="nav-logo" href="#hero">VB<span>.</span></a>
-    <ul class="nav-links">
+
+    <div class="hamburger" id="hamburger">
+      ☰
+    </div>
+
+    <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -623,7 +914,8 @@
           Hi, I'm<br><span class="name-accent">Vasanth</span>
         </h1>
         <p class="hero-desc fade-up delay-2">
-          Results-oriented Frontend Developer building responsive web applications with HTML5, CSS3 and JavaScript. Backed by Python scripting and Oracle SQL database design.
+          Results-oriented Frontend Developer building responsive web applications with HTML5, CSS3 and JavaScript.
+          Backed by Python scripting and Oracle SQL database design.
         </p>
         <div class="hero-cta fade-up delay-3">
           <a href="#projects" class="btn-primary">View Projects</a>
@@ -673,10 +965,14 @@
       <div class="about-grid">
         <div class="about-text">
           <p>
-            I'm a <strong>Frontend Developer</strong> with hands-on experience building responsive web applications. I completed an intensive <strong>6-month training programme</strong> at Infycle Technologies, Chennai, where I developed 3 end-to-end projects including a live-data REST API weather application and a normalised multi-table SQL management system.
+            I'm a <strong>Frontend Developer</strong> with hands-on experience building responsive web applications. I
+            completed an intensive <strong>6-month training programme</strong> at Infycle Technologies, Chennai, where I
+            developed 3 end-to-end projects including a live-data REST API weather application and a normalised
+            multi-table SQL management system.
           </p>
           <p>
-            I'm seeking a software engineering opportunity where I can contribute immediately and grow into a <strong>full-stack role</strong> within a dynamic technology environment.
+            I'm seeking a software engineering opportunity where I can contribute immediately and grow into a
+            <strong>full-stack role</strong> within a dynamic technology environment.
           </p>
           <div class="currently-learning">
             🚀 <strong>Currently learning:</strong> React.js — expanding towards full-stack development.
@@ -687,9 +983,12 @@
             <li><span>Name</span><span>Vasanth B</span></li>
             <li><span>Location</span><span>Chennai, India</span></li>
             <li><span>Phone</span><span>+91 99526 13649</span></li>
-            <li><span>Email</span><span><a href="mailto:vasanthb112003@gmail.com">vasanthb112003@gmail.com</a></span></li>
-            <li><span>LinkedIn</span><span><a href="https://www.linkedin.com/in/vasanth112003" target="_blank">vasanth112003</a></span></li>
-            <li><span>GitHub</span><span><a href="https://github.com/Vasanth2003-GIT" target="_blank">Vasanth2003-GIT</a></span></li>
+            <li><span>Email</span><span><a href="mailto:vasanthb112003@gmail.com">vasanthb112003@gmail.com</a></span>
+            </li>
+            <li><span>LinkedIn</span><span><a href="https://www.linkedin.com/in/vasanth112003"
+                  target="_blank">vasanth112003</a></span></li>
+            <li><span>GitHub</span><span><a href="https://github.com/Vasanth2003-GIT"
+                  target="_blank">Vasanth2003-GIT</a></span></li>
             <li><span>Degree</span><span>B.Tech — ECE · 7.2 CGPA</span></li>
           </ul>
         </div>
@@ -722,7 +1021,8 @@
           <div class="skill-cat-icon">🗄️</div>
           <h4>Database</h4>
           <div class="tags">
-            <span>Oracle SQL</span><span>PL/SQL</span><span>SQL Developer</span><span>SQL*Plus</span><span>CRUD Operations</span>
+            <span>Oracle SQL</span><span>PL/SQL</span><span>SQL Developer</span><span>SQL*Plus</span><span>CRUD
+              Operations</span>
           </div>
         </div>
         <div class="skill-cat">
@@ -736,7 +1036,8 @@
           <div class="skill-cat-icon">🧠</div>
           <h4>Soft Skills</h4>
           <div class="tags">
-            <span>Problem-solving</span><span>Quick Learner</span><span>Team Collaboration</span><span>Attention to Detail</span>
+            <span>Problem-solving</span><span>Quick Learner</span><span>Team Collaboration</span><span>Attention to
+              Detail</span>
           </div>
         </div>
         <div class="skill-cat">
@@ -765,9 +1066,11 @@
             <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>REST API</span>
           </div>
           <ul class="project-highlights">
-            <li>Integrated OpenWeather REST API with async/await to display real-time weather data for any searched city.</li>
+            <li>Integrated OpenWeather REST API with async/await to display real-time weather data for any searched
+              city.</li>
             <li>Implemented debounced search input — reduced redundant API calls by ~60% during rapid typing.</li>
-            <li>Fully responsive UI using CSS Flexbox, compatible across mobile and desktop with no layout breakage.</li>
+            <li>Fully responsive UI using CSS Flexbox, compatible across mobile and desktop with no layout breakage.
+            </li>
           </ul>
           <a class="project-link" href="https://github.com/Vasanth2003-GIT/weather-app" target="_blank">
             View on GitHub ↗
@@ -782,7 +1085,8 @@
             <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
           </div>
           <ul class="project-highlights">
-            <li>Built a task management app with full CRUD operations and real-time DOM updates — zero page reloads.</li>
+            <li>Built a task management app with full CRUD operations and real-time DOM updates — zero page reloads.
+            </li>
             <li>Modular JS architecture with clear separation of state management, rendering, and event handling.</li>
             <li>Input validation to prevent empty/duplicate tasks with inline user feedback messages.</li>
           </ul>
@@ -825,7 +1129,8 @@
           <h3>Frontend Development Training</h3>
           <p class="org">Infycle Technologies, Chennai</p>
           <ul>
-            <li>Completed a 3-month structured frontend programme — HTML5 semantic markup, CSS3 (Flexbox, Grid), JavaScript ES6+, responsive design, DOM manipulation, and event-driven programming.</li>
+            <li>Completed a 3-month structured frontend programme — HTML5 semantic markup, CSS3 (Flexbox, Grid),
+              JavaScript ES6+, responsive design, DOM manipulation, and event-driven programming.</li>
             <li>Developed the Weather App and To-Do List Application as assessed project deliverables.</li>
             <li>Studied UI/UX fundamentals including Figma for wireframing and prototyping.</li>
           </ul>
@@ -838,7 +1143,8 @@
           <p class="org">Infycle Technologies, Chennai</p>
           <ul>
             <li>Learned core SQL concepts — DDL, DML, and DCL commands; SELECT, JOIN, GROUP BY, ORDER BY.</li>
-            <li>Gained hands-on experience in database design and writing complex queries, subqueries, and constraints.</li>
+            <li>Gained hands-on experience in database design and writing complex queries, subqueries, and constraints.
+            </li>
             <li>Developed a Student Database project using Oracle SQL.</li>
           </ul>
         </div>
@@ -907,19 +1213,31 @@
       <p>I'm actively looking for software engineering opportunities. Feel free to reach out!</p>
       <div class="contact-links">
         <a class="contact-pill" href="mailto:vasanthb112003@gmail.com">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="m2 7 10 7 10-7" />
+          </svg>
           vasanthb112003@gmail.com
         </a>
         <a class="contact-pill" href="https://www.linkedin.com/in/vasanth112003" target="_blank">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
           LinkedIn
         </a>
         <a class="contact-pill" href="https://github.com/Vasanth2003-GIT" target="_blank">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48v-1.69c-2.78.61-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48v-1.69c-2.78.61-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z" />
+          </svg>
           GitHub
         </a>
         <a class="contact-pill" href="tel:+919952613649">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38a2 2 0 0 1 1.99-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.29 6.29l.87-.87a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38a2 2 0 0 1 1.99-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.29 6.29l.87-.87a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
           +91 99526 13649
         </a>
       </div>
@@ -929,6 +1247,14 @@
   <footer>
     <p>Designed &amp; built by Vasanth B · 2026</p>
   </footer>
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
 
+    hamburger.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
+    });
+  </script>
 </body>
+
 </html>
